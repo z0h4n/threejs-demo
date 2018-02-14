@@ -82,9 +82,9 @@ function animate() {
   cube5.rotation.z += 0.01;
 
   if (inc) {
-    pointLight.position.y += 1
+    pointLight.position.y += 2
   } else {
-    pointLight.position.y -= 1
+    pointLight.position.y -= 2
   }
 
   if (pointLight.position.y > 250) {
