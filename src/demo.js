@@ -34,7 +34,7 @@ scene.add(earhAxesHelper);
 const light = new THREE.AmbientLight(new THREE.Color(0x404040));
 scene.add(light);
 
-// -- Directional light poiting from left to right
+// -- Directional light pointing from left to right
 const directionalLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 2.5);
 directionalLight.position.set(-400, 0, 0);
 scene.add(directionalLight);
