@@ -39,7 +39,7 @@ const directionalLight = new THREE.DirectionalLight(new THREE.Color(0xffffff), 2
 directionalLight.position.set(-400, 0, 0);
 scene.add(directionalLight);
 
-// -- Helper to visualize position of directional light
+// -- Helper to visualize direction of directional light
 const directionalLightHelper = new THREE.DirectionalLightHelper(directionalLight, 200);
 scene.add(directionalLightHelper);
 
