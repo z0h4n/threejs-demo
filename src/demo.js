@@ -5,7 +5,7 @@ const height = 500;
 // -- Scene
 const scene = new THREE.Scene();
 
-// -- Creating and adding webgl renderer
+// -- Using webgl renderer
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(width, height);
 renderer.setClearColor(new THREE.Color('lightgray'));
