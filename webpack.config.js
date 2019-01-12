@@ -1,12 +1,13 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/demo',
+  entry: './src/demo.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -15,19 +16,21 @@ module.exports = {
         include: [
           path.resolve(__dirname, 'src')
         ],
-        loader: 'babel-loader',
-        options: { presets: ['env'] }
+        loader: 'babel-loader'
       }
     ]
   },
   devtool: 'source-map',
-  devServer: {
-    open: true
-  },
   plugins: [
     new CleanWebpackPlugin('dist'),
     new HtmlWebpackPlugin({
       template: './src/index.html'
-    })
-  ]
+    }),
+    new CopyWebpackPlugin(['src/earth.jpg'])
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 };
