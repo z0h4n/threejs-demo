@@ -1,9 +1,2 @@
 # A ThreeJS Demo Project
-Do
-```
-npm install
-```
-Then
-```
-npm start
-```
+[See Demo](https://z0h4n.github.io/threejs-demo/dist/)
