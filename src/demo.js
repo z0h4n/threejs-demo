@@ -1,4 +1,5 @@
-const THREE = require('three');
+import * as THREE from './three.module.js';
+
 const width = 800;
 const height = 500;
 
@@ -18,7 +19,7 @@ camera.position.set(0, 0, 400);
 // -- Earth Mesh = Earth Geometry + Earth Material
 const earthGeometry = new THREE.SphereGeometry(200, 32, 32);
 const earthMaterial = new THREE.MeshPhongMaterial({
-  map: new THREE.TextureLoader().load('earth.jpg')
+  map: new THREE.TextureLoader().load('./src/earth.jpg')
 });
 const earthMesh = new THREE.Mesh(earthGeometry, earthMaterial);
 scene.add(earthMesh);
